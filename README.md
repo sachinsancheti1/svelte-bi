@@ -55,7 +55,7 @@ If the Bootstrap icon name is `arrow-90deg-left`, the component name will be `Bi
 
 ```svelte
 <script>
-  import BiAirplaneEngines from "svelte-bi/dist/BiAirplaneEngines.svelte";
+  import BiAirplaneEngines from "svelte-bi/BiAirplaneEngines.svelte";
 </script>
 
 <BiAirplaneEngines size={43} />
@@ -69,7 +69,7 @@ If the Bootstrap icon name is `arrow-90deg-left`, the component name will be `Bi
 
 ```svelte
 <script>
-  import BiAirplaneEngines from "svelte-bi/dist/BiAirplaneEngines.svelte";
+  import BiAirplaneEngines from "svelte-bi/BiAirplaneEngines.svelte";
 </script>
 
 <BiAirplaneEngines class="text-primary pe-3 ms-2" />
@@ -81,7 +81,7 @@ If the Bootstrap icon name is `arrow-90deg-left`, the component name will be `Bi
 
 ```svelte
 <script>
-  import BiAirplaneEngines from "svelte-bi/dist/BiAirplaneEngines.svelte";
+  import BiAirplaneEngines from "svelte-bi/BiAirplaneEngines.svelte";
 </script>
 
 <BiAirplaneEngines onclick={(e) => console.log(e.target)} data-foo="bar" />
@@ -99,5 +99,5 @@ gh repo clone onokumus/svelte-bi
 cd svelte-bi
 bun install
 bun index.ts
-bun run dev
+bun dev
 ```
