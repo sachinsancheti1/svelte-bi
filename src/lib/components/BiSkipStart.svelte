@@ -1,0 +1,10 @@
+<script lang="ts">
+    interface Props {
+        size?: number | string;
+        class?: string;
+    }
+    let {size=16, class:klass, ...rest}: Props = $props();
+</script>
+<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="currentColor" class:bi={true} class:bi-skip-start={true} class={klass} viewBox="0 0 16 16" {...rest}>
+    <path d="M4 4a.5.5 0 0 1 1 0v3.248l6.267-3.636c.52-.302 1.233.043 1.233.696v7.384c0 .653-.713.998-1.233.696L5 8.752V12a.5.5 0 0 1-1 0zm7.5.633L5.696 8l5.804 3.367z"/>
+</svg>
