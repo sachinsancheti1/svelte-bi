@@ -37,8 +37,8 @@ If the Bootstrap icon name is `arrow-90deg-left`, the component name will be `Bi
 
 ```svelte
 <script>
-  import BiAirplaneEngines from "svelte-bi/dist/BiAirplaneEngines.svelte";
-  import BiExclamationLg from "svelte-bi/dist/BiAirplaneEngines.svelte";
+  import BiAirplaneEngines from "svelte-bi/BiAirplaneEngines.svelte";
+  import BiExclamationLg from "svelte-bi/BiAirplaneEngines.svelte";
 </script>
 
 <BiAirplaneEngines />
