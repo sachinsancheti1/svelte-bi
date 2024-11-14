@@ -3,6 +3,17 @@
     "description": "Bootstrap Icons for Svelte 5",
     "version": "0.0.5",
     "license": "MIT",
+    "keywords": [
+        "svelte",
+        "icons",
+        "bootstrap",
+        "svg"
+    ],
+    "author": "Osman Nuri Okumuş <onokumus@gmail.com> (https://github.com/onokumus)",
+    "repository": "onokumus/svelte-bi",
+    "bugs": {
+        "url": "https://github.com/onokumus/svelte-bi/issues"
+    },
     "scripts": {
         "dev": "vite dev",
         "build": "vite build && npm run package",
