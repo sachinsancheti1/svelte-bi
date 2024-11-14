@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    "build": "deno run main.ts"
+  },
+  "nodeModulesDir": "auto"
+}
