@@ -1,6 +1,17 @@
 {
-  "tasks": {
-    "build": "deno run main.ts"
-  },
-  "nodeModulesDir": "auto"
+    "tasks": {
+        "build": "deno run main.ts",
+        "lint": "deno lint"
+    },
+    "lint": {
+        "include": [
+            "src/"
+        ]
+    },
+    "fmt": {
+        "include": [
+            "src/"
+        ]
+    },
+    "nodeModulesDir": "auto"
 }

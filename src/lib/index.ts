@@ -8,6 +8,6 @@ export interface IconProps {
   font?: boolean;
   size?: string | number;
   fill?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 export { default as Bi } from "./Bi.svelte";

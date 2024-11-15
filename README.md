@@ -172,7 +172,7 @@ git clone https://github.com/onokumus/svelte-bi.git
 gh repo clone onokumus/svelte-bi
 
 cd svelte-bi
-npm install
+deno install
 deno run main.ts
-npm run dev
+deno run dev
 ```
