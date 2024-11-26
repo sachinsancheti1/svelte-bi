@@ -1,6 +1,7 @@
 {
     "tasks": {
-        "build": "deno run main.ts",
+        "icons": "deno run -A main.ts",
+        "icons:watch": "deno run -A --watch main.ts",
         "lint": "deno lint"
     },
     "lint": {

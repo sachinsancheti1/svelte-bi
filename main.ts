@@ -1,18 +1,50 @@
 import { DOMParser } from "jsr:@b-fuze/deno-dom";
 import * as path from "jsr:@std/path";
 
+const icons: { [key: string]: string } = {};
+
+function capitalizeAndRemoveDash(str: string) {
+  return str
+    .split("-")
+    .map((s) => s.charAt(0).toUpperCase() + s.slice(1))
+    .join("");
+}
+
 const BiIconPath = path.join("./node_modules/bootstrap-icons/icons");
 const BiIcons = Deno.readDirSync(BiIconPath);
-
-const icons: { [key: string]: string } = {};
 
 for (const bi of BiIcons) {
   const text = await Deno.readTextFile(path.join(BiIconPath, bi.name));
   const doc = new DOMParser().parseFromString(text, "text/html");
   const svg = doc.querySelector("svg")!;
   const svgInner = svg.innerHTML;
-  icons[bi.name.replace(".svg", "")] = svgInner;
+  const iconName = bi.name.replace(".svg", "");
+
+  // add to icons object
+  icons[iconName] = svgInner;
+
+  // write to file
+  const componentName = capitalizeAndRemoveDash(iconName);
+  const exportLine = `export { default as Bi${componentName} } from "./Bi${componentName}.svelte";`;
+  const encoder = new TextEncoder();
+  const data = encoder.encode(`${exportLine}\n`);
+
+  const svelteTemplate = `<script lang="ts">
+    import type { IconProps } from "./index.js";
+    let { class: klass, size = 16, fill = "currentColor", ...rest }: Partial<IconProps> = $props();
+</script>
+<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} {fill} class:bi={true} class:bi-${iconName}={true} class={klass} viewBox="0 0 16 16" {...rest}>
+    ${svgInner}
+</svg>`;
+
+  // create svelte component
+  Deno.writeTextFile(`./src/lib/Bi${componentName}.svelte`, svelteTemplate);
+
+  // create export line
+  Deno.writeFileSync("./src/lib/index.ts", data, { append: true });
 }
+
+// write icons object to file
 Deno.writeTextFile(
   "./src/lib/bicons.ts",
   `export const bicons = ${JSON.stringify(icons, null, 2)};`,
