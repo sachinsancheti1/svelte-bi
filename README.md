@@ -26,13 +26,30 @@ yarn add svelte-bi
 
 ### Import from package
 
-> When calling the component, capitalize the first letter of every word in the symbol name, add `Bi` in front, and remove the `-`
+#### Component Naming Instructions
 
-> For example:
+When calling the component, follow these steps:
 
-> 0-square-fill => Bi0SquareFill
+1. Capitalize the First Letter of Each Word:
 
-> airplane-engines-fill => BiAirplaneEnginesFill
+   - Take the symbol name and ensure that the first letter of every word is capitalized. For example, if the symbol name is `arrow-90deg-left`, it should be transformed to `Arrow90degLeft`.
+
+2. Remove Hyphens:
+
+   - Remove any hyphens (-) from the symbol name. This helps in creating a clean and readable component name.
+
+3. Add Prefix:
+
+   - Add the prefix `Bi` to the beginning of the transformed symbol name. This indicates that the component is part of the Bootstrap icon set.
+
+Putting it all together, if the original symbol name is `arrow-90deg-left`, the final component name will be `BiArrow90degLeft`.
+
+For example:
+
+```js
+0-square-fill => Bi0SquareFill
+airplane-engines-fill => BiAirplaneEnginesFill
+```
 
 ```svelte
 <script>
@@ -61,8 +78,7 @@ Changes the dimensions of the icon.
 
 ### fill (optional)
 
-Changes the color of the icon. This is valid if the icon is loaded as `svg`.
-Otherwise, it has no effect.
+Changes the color of the icon.
 
 > type: string, default: currentColor
 
