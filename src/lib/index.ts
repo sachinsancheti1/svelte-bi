@@ -1,16 +1,9 @@
-import { bicons } from "./bicons.js";
-
-export type BiIconName = keyof typeof bicons;
-
 export interface IconProps {
   class?: string;
-  name: BiIconName;
-  font?: boolean;
   size?: string | number;
   fill?: string;
   [key: string]: unknown;
 }
-export { default as Bi } from "./Bi.svelte";
 export { default as Bi0CircleFill } from "./Bi0CircleFill.svelte";
 export { default as Bi0Circle } from "./Bi0Circle.svelte";
 export { default as Bi0SquareFill } from "./Bi0SquareFill.svelte";

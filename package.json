@@ -1,7 +1,7 @@
 {
   "name": "svelte-bi",
   "description": "Bootstrap Icons for Svelte 5",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
   "keywords": [
     "svelte",
@@ -9,10 +9,10 @@
     "bootstrap",
     "svg"
   ],
-  "author": "Osman Nuri Okumuş <onokumus@gmail.com> (https://github.com/onokumus)",
-  "repository": "onokumus/svelte-bi",
+  "author": "sachinsancheti1",
+  "repository": "sachinsancheti1/svelte-bi",
   "bugs": {
-    "url": "https://github.com/onokumus/svelte-bi/issues"
+    "url": "https://github.com/sachinsancheti1/svelte-bi/issues"
   },
   "scripts": {
     "dev": "vite dev",
@@ -38,10 +38,6 @@
     ".": {
       "types": "./dist/index.d.ts",
       "svelte": "./dist/index.js"
-    },
-    "./Bi.svelte": {
-      "types": "./dist/Bi.svelte.d.ts",
-      "import": "./dist/Bi.svelte"
     }
   },
   "peerDependencies": {

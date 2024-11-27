@@ -1,7 +1,8 @@
 import { DOMParser } from "jsr:@b-fuze/deno-dom";
 import * as path from "jsr:@std/path";
 
-const icons: { [key: string]: string } = {};
+// deprecated
+// const icons: { [key: string]: string } = {};
 
 function capitalizeAndRemoveDash(str: string) {
   return str
@@ -21,7 +22,8 @@ for (const bi of BiIcons) {
   const iconName = bi.name.replace(".svg", "");
 
   // add to icons object
-  icons[iconName] = svgInner;
+  // deprecated
+  // icons[iconName] = svgInner;
 
   // write to file
   const componentName = capitalizeAndRemoveDash(iconName);
@@ -45,7 +47,8 @@ for (const bi of BiIcons) {
 }
 
 // write icons object to file
-Deno.writeTextFile(
-  "./src/lib/bicons.ts",
-  `export const bicons = ${JSON.stringify(icons, null, 2)};`,
-);
+// deprecated
+// Deno.writeTextFile(
+//   "./src/lib/bicons.ts",
+//   `export const bicons = ${JSON.stringify(icons, null, 2)};`,
+// );

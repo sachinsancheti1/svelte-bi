@@ -120,13 +120,13 @@ Changes the color of the icon.
 
 ```bash
 # git
-git clone https://github.com/onokumus/svelte-bi.git
+git clone https://github.com/sachinsancheti1/svelte-bi.git
 
 # github-cli
-gh repo clone onokumus/svelte-bi
+gh repo clone sachinsancheti1/svelte-bi
 
 cd svelte-bi
-deno install
-deno task icons
-deno run dev
+npm install
+deno run -A main.ts
+npm run package
 ```
