@@ -1,8 +1,8 @@
 <script lang="ts">
-    import type { IconProps } from "./index.js";
-    let { class: klass, size = 16, fill = "currentColor", ...rest }: Partial<IconProps> = $props();
+    import type { IconProps } from "./types.js";
+    let { class: cls, size = 16, fill = "currentColor", ...rest }: IconProps = $props();
 </script>
-<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} {fill} class:bi={true} class:bi-battery-charging={true} class={klass} viewBox="0 0 16 16" {...rest}>
+<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} {fill} class={["bi", "bi-battery-charging", cls]} viewBox="0 0 16 16" {...rest}>
     
   <path d="M9.585 2.568a.5.5 0 0 1 .226.58L8.677 6.832h1.99a.5.5 0 0 1 .364.843l-5.334 5.667a.5.5 0 0 1-.842-.49L5.99 9.167H4a.5.5 0 0 1-.364-.843l5.333-5.667a.5.5 0 0 1 .616-.09z"></path>
   <path d="M2 4h4.332l-.94 1H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h2.38l-.308 1H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2"></path>

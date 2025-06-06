@@ -1,8 +1,8 @@
 <script lang="ts">
-    import type { IconProps } from "./index.js";
-    let { class: klass, size = 16, fill = "currentColor", ...rest }: Partial<IconProps> = $props();
+    import type { IconProps } from "./types.js";
+    let { class: cls, size = 16, fill = "currentColor", ...rest }: IconProps = $props();
 </script>
-<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} {fill} class:bi={true} class:bi-backpack2={true} class={klass} viewBox="0 0 16 16" {...rest}>
+<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} {fill} class={["bi", "bi-backpack2", cls]} viewBox="0 0 16 16" {...rest}>
     
   <path d="M4.04 7.43a4 4 0 0 1 7.92 0 .5.5 0 1 1-.99.14 3 3 0 0 0-5.94 0 .5.5 0 1 1-.99-.14"></path>
   <path fill-rule="evenodd" d="M4 9.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm1 .5v3h6v-3h-1v.5a.5.5 0 0 1-1 0V10z"></path>
