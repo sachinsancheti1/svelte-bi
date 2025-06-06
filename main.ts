@@ -4,6 +4,16 @@ import * as path from "jsr:@std/path";
 // deprecated
 // const icons: { [key: string]: string } = {};
 
+// delete src/lib/index.ts if it exists
+try {
+  await Deno.stat("./src/lib/index.ts");
+  await Deno.remove("./src/lib/index.ts");
+} catch (err) {
+  if (!(err instanceof Deno.errors.NotFound)) {
+    throw err;
+  }
+}
+
 function capitalizeAndRemoveDash(str: string) {
   return str
     .split("-")
@@ -32,10 +42,10 @@ for (const bi of BiIcons) {
   const data = encoder.encode(`${exportLine}\n`);
 
   const svelteTemplate = `<script lang="ts">
-    import type { IconProps } from "./index.js";
-    let { class: klass, size = 16, fill = "currentColor", ...rest }: Partial<IconProps> = $props();
+    import type { IconProps } from "./types.js";
+    let { class: cls, size = 16, fill = "currentColor", ...rest }: IconProps = $props();
 </script>
-<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} {fill} class:bi={true} class:bi-${iconName}={true} class={klass} viewBox="0 0 16 16" {...rest}>
+<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} {fill} class={["bi", "bi-${iconName}", cls]} viewBox="0 0 16 16" {...rest}>
     ${svgInner}
 </svg>`;
 
