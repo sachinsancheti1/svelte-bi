@@ -1,12 +1,14 @@
 {
   "name": "svelte-bi",
   "description": "Bootstrap Icons for Svelte 5",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "MIT",
   "keywords": [
     "svelte",
+    "sveltekit",
     "icons",
     "bootstrap",
+    "components",
     "svg"
   ],
   "author": "sachinsancheti1",
@@ -44,17 +46,15 @@
     "svelte": "^5.0.0"
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "^3.3.1",
-    "@sveltejs/kit": "^2.8.4",
-    "@sveltejs/package": "^2.3.7",
-    "@sveltejs/vite-plugin-svelte": "^4.0.2",
-    "@types/bun": "^1.1.14",
-    "@types/node": "^22.10.0",
-    "bootstrap-icons": "^1.11.3",
-    "publint": "^0.2.12",
-    "svelte": "^5.2.8",
-    "svelte-check": "^4.1.0",
-    "typescript": "^5.7.2",
-    "vite": "^5.4.11"
+    "@sveltejs/adapter-auto": "^6.0.1",
+    "@sveltejs/kit": "^2.21.2",
+    "@sveltejs/package": "^2.3.11",
+    "@sveltejs/vite-plugin-svelte": "^5.1.0",
+    "bootstrap-icons": "^1.13.1",
+    "publint": "^0.3.12",
+    "svelte": "^5.33.14",
+    "svelte-check": "^4.2.1",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
   }
 }
