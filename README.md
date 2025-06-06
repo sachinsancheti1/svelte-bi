@@ -3,6 +3,24 @@
 > [Bootstrap SVG Icons](https://github.com/twbs/icons) for Svelte >= 5
 > components
 
+<a href="https://www.npmjs.com/package/svelte-bi">
+    <img src="https://img.shields.io/npm/v/svelte-bi.svg" alt="NPM Version">
+  </a>
+  <a href="https://www.npmjs.com/package/svelte-bi">
+    <img src="https://img.shields.io/npm/dt/svelte-bi.svg" alt="NPM Downloads">
+  </a>
+  <a href="https://github.com/sachinsancheti1/svelte-bi/blob/main/LICENSE">
+    <img src="https://img.shields.io/npm/l/svelte-bi.svg" alt="License">
+  </a>
+
+## Why svelte-bi?
+
+- **Performance-Focused:** Only the icons you actually use are included in your final application bundle, thanks to tree-shaking. No more importing a massive library for just a few icons.
+- **Easy to Use:** Import icons as you would any other Svelte component.
+- **Fully Customizable:** Easily control size, color, and other SVG attributes directly with props.
+- **TypeScript Support:** Written entirely in TypeScript for a great developer experience.
+- **Complete Set:** Includes all icons from the latest version of Bootstrap Icons.
+
 ## Install
 
 ```bash
@@ -126,7 +144,7 @@ git clone https://github.com/sachinsancheti1/svelte-bi.git
 gh repo clone sachinsancheti1/svelte-bi
 
 cd svelte-bi
-npm install
+deno install
 deno run -A main.ts
-npm run package
+deno task package
 ```
