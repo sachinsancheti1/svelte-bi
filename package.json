@@ -1,18 +1,30 @@
 {
   "name": "svelte-bi",
-  "description": "Bootstrap Icons for Svelte 5",
-  "version": "0.0.8",
+  "description": "Bootstrap Icons for Svelte 5 — 2,000+ tree-shakable, TypeScript-ready icon components.",
+  "version": "0.0.9",
   "license": "MIT",
   "keywords": [
     "svelte",
+    "svelte5",
     "sveltekit",
     "icons",
+    "icon",
+    "icon-set",
+    "icon-library",
+    "svelte-icons",
     "bootstrap",
+    "bootstrap-icons",
     "components",
-    "svg"
+    "svg",
+    "tree-shakable",
+    "typescript"
   ],
   "author": "sachinsancheti1",
-  "repository": "sachinsancheti1/svelte-bi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sachinsancheti1/svelte-bi.git"
+  },
+  "homepage": "https://github.com/sachinsancheti1/svelte-bi#readme",
   "bugs": {
     "url": "https://github.com/sachinsancheti1/svelte-bi/issues"
   },

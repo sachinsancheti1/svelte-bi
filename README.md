@@ -3,15 +3,9 @@
 > [Bootstrap SVG Icons](https://github.com/twbs/icons) for Svelte >= 5
 > components
 
-<a href="https://www.npmjs.com/package/svelte-bi">
-    <img src="https://img.shields.io/npm/v/svelte-bi.svg" alt="NPM Version">
-  </a>
-  <a href="https://www.npmjs.com/package/svelte-bi">
-    <img src="https://img.shields.io/npm/dt/svelte-bi.svg" alt="NPM Downloads">
-  </a>
-  <a href="https://github.com/sachinsancheti1/svelte-bi/blob/main/LICENSE">
-    <img src="https://img.shields.io/npm/l/svelte-bi.svg" alt="License">
-  </a>
+[![NPM Version](https://img.shields.io/npm/v/svelte-bi.svg)](https://www.npmjs.com/package/svelte-bi)
+[![NPM Downloads](https://img.shields.io/npm/dt/svelte-bi.svg)](https://www.npmjs.com/package/svelte-bi)
+[![License](https://img.shields.io/npm/l/svelte-bi.svg)](https://github.com/sachinsancheti1/svelte-bi/blob/main/LICENSE)
 
 ## Why svelte-bi?
 
@@ -41,6 +35,10 @@ yarn add svelte-bi
 ```
 
 ## Usage
+
+### Finding icons
+
+Browse and search the full catalog at **[icons.getbootstrap.com](https://icons.getbootstrap.com/)**. Each icon there lists its name (e.g. `arrow-90deg-left`) — convert that name to a component name using the rules below.
 
 ### Import from package
 
@@ -79,6 +77,15 @@ airplane-engines-fill => BiAirplaneEnginesFill
 ```
 
 ## Props
+
+| Prop      | Type               | Default        | Description                                  |
+| --------- | ------------------ | -------------- | -------------------------------------------- |
+| `size`    | `number \| string` | `16`           | Width and height of the icon.                |
+| `fill`    | `string`           | `currentColor` | Icon color.                                  |
+| `class`   | `string`           | `null`         | HTML `class` attribute.                      |
+| `...rest` | `SVGAttributes`    | —              | Any other SVG attribute (e.g. `onclick`).    |
+
+Components are fully typed — props are checked against the SVG element, so editors autocomplete and type-check every attribute.
 
 ### size (optional)
 
